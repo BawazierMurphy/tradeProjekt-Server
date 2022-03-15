@@ -9,7 +9,11 @@ app.use(express.json());
 
 const { offerRouter } = require("./route/route");
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://wouldyoubemygf.vercel.app",
+  })
+);
 
 // API ACCESS AUTHORIZATION MIDDLEWARE
 app.use((req, res, next) => {
